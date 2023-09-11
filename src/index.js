@@ -16,7 +16,9 @@ root.render(
                 <img src={logo} alt="TrakStack logo" />
                 <h1>Create your own custom Spotify playlists!</h1>
             </header>
+            <div>
            <App />
+           </div>
         </div>
 
 </React.StrictMode>

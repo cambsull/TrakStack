@@ -1,1 +1,41 @@
 /*Track CSS module*/
+
+/* Container */
+.trackContainer {
+    display: flex;
+    align-items: center;  
+    background-color: rgba(255, 255, 255, 0.2); 
+    padding: 10px;
+    border-radius: 8px;  
+    margin: 10px 0; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Image */
+.albumArt {
+    width: 134px;
+    height: 100px;
+    object-fit: cover;  
+    margin-right: 15px; 
+}
+
+/* Text */
+.artistName, .albumTitle, .trackName {
+    margin: 2px 0; 
+}
+
+.artistName {
+    font-weight: bold;
+}
+
+.albumTitle {
+    font-style: italic;
+}
+
+.trackName {
+   
+}
+
+.duration {
+
+}
