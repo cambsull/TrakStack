@@ -3,12 +3,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import logo from './assets/img/trakStackLogo.png';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  
+  <div className="container">
+            <header className="header">
+                <img src={logo} alt="TrakStack logo" />
+                <h1>Create your own custom Spotify playlists!</h1>
+            </header>
+           <App />
+        </div>
+
+</React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
