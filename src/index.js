@@ -10,16 +10,17 @@ import logo from './assets/img/trakStackLogo.png';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  
+  <>
   <div className="container">
             <header className="header">
                 <img src={logo} alt="TrakStack logo" />
-                <h1>Create your own custom Spotify playlists!</h1>
+                <h2>Create your own custom Spotify playlists!</h2>
             </header>
-            <div>
-           <App />
-           </div>
-        </div>
+  </div>
+  <div className="contentContainer">
+        <App />
+  </div>
+</>
 
 </React.StrictMode>
 );

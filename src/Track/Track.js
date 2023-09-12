@@ -1,8 +1,9 @@
 //Track component
 
-import { useState, useEffect } from 'react';
 import styles from "./Track.module.css";
 import albumArt from '../mockdata/img/catClownSad.png';
+import albumArt2 from '../mockdata/img/waitingForJob.png';
+import albumArt3 from '../mockdata/img/codingWithZapfino.png';
 
 //Convert duration in seconds to minutes and seconds and display appropriately.
 function formatDuration(seconds) {
@@ -28,4 +29,4 @@ function Track (props) {
 }
 
 export default Track;
-export { albumArt };
+export { albumArt, albumArt2, albumArt3 };
