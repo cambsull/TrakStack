@@ -1,19 +1,42 @@
+/* Mobile */
+@media only screen and (max-width: 767px) {
+    .mainContainer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .searchContainer, .tracklistContainer {
+        flex: none;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
 .mainContainer {
     width: 100%;
     display: flex;
-    gap: 20px; /* This creates space between the two columns */
+    gap: 20px; 
 }
 
 .searchContainer {
-    flex: 1; /* This takes up 2/3 of the available space */
-    background-color: rgba(255, 255, 255, 0.1); /* Optional background color for clarity */
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1); 
     border-radius: 15px;
     padding: 20px;
 }
 
 .tracklistContainer {
-    flex: 1; /* This takes up 1/3 of the available space */
-    background-color: rgba(255, 255, 255, 0.1); /* Optional background color for clarity */
+    flex: 1; 
+    background-color: rgba(255, 255, 255, 0.1); 
     border-radius: 15px;
     padding: 20px;
+}
+
+.submitToSpotifyContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  
+  
 }

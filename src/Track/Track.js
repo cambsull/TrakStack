@@ -15,15 +15,22 @@ function formatDuration(seconds) {
 function Track (props) {
 
         return (
-            <div className={styles.trackContainer}>
-                <img className={styles.albumArt} src={props.albumArt} alt="Album Art" />
-                <div>
-                    <div className={styles.artistName}> {props.artistName}</div>
-                    <div className={styles.albumTitle}>{props.albumTitle}</div>
-                    <div className={styles.trackName}>{props.trackName}</div>
-                    <div className={styles.trackDuration}>{formatDuration(props.duration)}</div>
-                </div>
+            <>
+          <div className={styles.trackContainer}>
+        <div className={styles.trackInfo}> 
+            <img className={styles.albumArt} src={props.albumArt} alt="Album Art" />
+            <div>
+                <div className={styles.artistName}> {props.artistName}</div>
+                <div className={styles.albumTitle}>{props.albumTitle}</div>
+                <div className={styles.trackName}>{props.trackName}</div>
+                <div className={styles.trackDuration}>{formatDuration(props.duration)}</div>
             </div>
+        </div>
+        <div>
+            <button className={styles.removeButton} onClick={() => props.onRemove(props.id)}>Remove</button>
+        </div>
+    </div>
+            </>
         );
    
 }

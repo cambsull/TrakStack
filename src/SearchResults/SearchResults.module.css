@@ -1,1 +1,17 @@
 /*Search results CSS module*/
+
+.resultsContainer {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.searchResult {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.searchResult:hover {
+    background: #f9f9f9;
+}
