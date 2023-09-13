@@ -21,7 +21,7 @@ function SubmitToSpotify() {
     return (
         <button className={styles.submitButton} onClick={handleClick} ref={btnRef}>
         <span className={styles.desktopText}>Save your playlist to your Spotify account!</span>
-        <span className={styles.mobileText}>Submit your playlist to Spotify!</span>
+        <span className={styles.mobileText}>Save to Spotify!</span>
     </button>
     );
 
