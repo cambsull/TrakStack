@@ -11,26 +11,26 @@ import SearchResults from './SearchResults/SearchResults.js';
 const mockTrackObjectsArray = [{
     id: 1,
     albumArt: albumArt,
-    albumTitle: `Sad Clown Cat's Greatest Hits`,
-    artistName: `Sad Clown Cat`,
-    trackName: `Cat Clownin'`,
-    duration: 188
+    albumTitle: `Nerd Life`,
+    artistName: `YTCracker`,
+    trackName: `nerd life`,
+    duration: 297
 },
 {
     id: 2,
     albumArt: albumArt2,
-    albumTitle: `Waiting for a Developer Job`,
-    artistName: `Self-taught Coder`,
-    trackName: `I'm Sure They'll Call Any Minute Now`,
-    duration: 201
+    albumTitle: `Brothers`,
+    artistName: `The Black Keys`,
+    trackName: `She's Long Gone`,
+    duration: 187
 },
 {
     id: 3,
     albumArt: albumArt3,
-    albumTitle: `Bad Fonts for Coding`,
-    artistName: `Squinty Joe`,
-    trackName: `Coding in Zapfino`,
-    duration: 289  
+    albumTitle: `Dark Side of the Moon`,
+    artistName: `Pink Floyd`,
+    trackName: `Money`,
+    duration: 383 
 }
 ]
 
