@@ -4,6 +4,22 @@
 
 /* Tablet */
 @media only screen and (max-width: 1024px) {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: rgba(30, 30, 90, 1);
+    margin: 0; 
+    display: flex;
+    flex-direction: column; 
+    height: 100vh;
+    overflow: auto;
+    width: 100%; 
+    align-items: stretch;
+  }
+
   .container {
       padding: 15px;
       margin-top: 10px;
@@ -14,18 +30,28 @@
       width: 90%;
       padding: 15px;
   }
-
+  
   .header {
-    padding: 15px 0;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); 
   }
-
+  
+  .header img {
+    max-width: 100%;
+    height: auto;
+  }
+  
   .header h2 {
-    font-size: 20px;
+    color: gold;
   }
-
+  
   .header h4 {
     color: white; 
   }
+  
 
 }
 
@@ -33,6 +59,22 @@
 
 /* Mobile */
 @media only screen and (max-width: 767px) {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: rgba(30, 30, 90, 1);
+    margin: 0; 
+    display: flex;
+    flex-direction: column; 
+    height: 100vh;
+    overflow: auto;
+    width: 100%; 
+    align-items: stretch;
+  }
+
   .container {
       padding: 10px;
       margin-top: 5px;
@@ -44,17 +86,27 @@
       padding: 10px;
      }
 
-  .header {
-    padding: 10px 0;
-  }
-
-  .header h2 {
-    font-size: 16px;
-  }
-  
-  .header h4 {
-    color: white; 
-  }
+     .header {
+      text-align: center;
+      padding: 20px 0;
+      width: 100%;
+      height: auto;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5); 
+    }
+    
+    .header img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .header h2 {
+      color: gold;
+    }
+    
+    .header h4 {
+      color: white; 
+    }
+    
 
 }
 
@@ -63,8 +115,9 @@
 
 /* Desktop */
 
-@media only screen and (min-width: 768px) {
-body {
+@media only screen and (min-width: 1025px) {
+
+  body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
@@ -124,4 +177,5 @@ body {
 .header h4 {
   color: white; 
 }
+
 }
