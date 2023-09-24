@@ -1,10 +1,4 @@
-import { useEffect } from 'react';
-
 function CreateToken() {
-
-    console.log('CreateToken component rendered');
-    
-    useEffect(() => {
 
         let client_id = process.env.REACT_APP_CLIENT_ID;
         let client_secret = process.env.REACT_APP_CLIENT_SECRET;
@@ -29,13 +23,6 @@ function CreateToken() {
         .catch(e => {
             console.log('Error:', e);
         });
-
-        console.log('Client ID:', process.env.REACT_APP_CLIENT_ID);
-        console.log('Client Secret:', process.env.REACT_APP_CLIENT_SECRET);
-
-    }, []);
-
-    return console.log('Default return');
-};
+}
 
 export default CreateToken;
