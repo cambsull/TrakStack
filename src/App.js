@@ -1,57 +1,72 @@
 import './App.css';
-import { useState } from 'react';
-import { albumArt, albumArt2, albumArt3 } from './Track/Track.js';
+import { useState, useEffect } from 'react';
 import Tracklist from './Tracklist/Tracklist.js';
 import SubmitToSpotify from './SubmitToSpotify/SubmitToSpotify.js';
 import SearchBar from './SearchBar/SearchBar.js';
 import SearchResults from './SearchResults/SearchResults.js';
 import CreateToken from './Token/CreateToken.js';
 
-const mockTrackObjectsArray = [{
-    id: 1,
-    albumArt: albumArt,
-    albumTitle: `Nerd Life`,
-    artistName: `YTCracker`,
-    trackName: `nerd life`,
-    duration: 297
-},
-{
-    id: 2,
-    albumArt: albumArt2,
-    albumTitle: `Brothers`,
-    artistName: `The Black Keys`,
-    trackName: `She's Long Gone`,
-    duration: 187
-},
-{
-    id: 3,
-    albumArt: albumArt3,
-    albumTitle: `Dark Side of the Moon`,
-    artistName: `Pink Floyd`,
-    trackName: `Money`,
-    duration: 383
-}]
+
 
 function App() {
 
+    //Establish token state for API when component mounts
+    const [token, setToken] = useState(null);
+
+    useEffect(() => {
+        CreateToken()
+            .then(token => {
+                setToken(token);
+            })
+            .catch(error => {
+                console.error("Error getting token:", error);
+            });
+    }, []);
+
+
     //Search functionality
     const [results, setResults] = useState([]);
-
-    const [tracks, setTracks] = useState(mockTrackObjectsArray);
+    const [tracks, setTracks] = useState([]);
+    
 
     const handleSearch = (query) => {
+
+        const baseURL='https://api.spotify.com/v1/search'
+        const type='artist,album,track'
+        const queryParams = encodeURIComponent(query)
+        const typeParams = encodeURIComponent(type)
+        const headers= { Authorization: `Bearer ${token}` }
+      
+        const endURL= `${baseURL}?q=${queryParams}&type=${typeParams}`;
+
+
         if (query.length <= 0) {
             setResults([]);
             return;
         }
-        const filteredResults = mockTrackObjectsArray.filter(track =>
-            track.trackName.toLowerCase().includes(query.toLowerCase()) ||
-            track.artistName.toLowerCase().includes(query.toLowerCase()) ||
-            track.albumTitle.toLowerCase().includes(query.toLowerCase()
-            )
-        );
+        fetch(endURL, {
+            method: 'GET',
+            headers: headers
+        })
+        .then(response => response.json())
+        .then(data => {
+            let searchResults = data.tracks.items
+            console.log('Response: ', searchResults)
 
+        //Extract relevant information
+        const filteredResults = searchResults.map(item => ({
+            id: item.id,
+            trackName: item.name,
+            artistName: item.artists.map(artist => artist.name),
+            albumArt: item.album.images.length > 0 ? item.album.images[0].url : null
+        }));
+        //set the results and catch any errors
         setResults(filteredResults)
+        })
+        .catch(error => {
+            console.error("Error fetching data: ", error);
+            setResults([]);
+        });
     }
 
     const handleResult = (result) => {
@@ -61,11 +76,9 @@ function App() {
         };
     }
 
-
     //Rendering
     return (
         <>
-            <CreateToken />
             <div className="mainContainer">
                 <div className="searchContainer">
                     <div>

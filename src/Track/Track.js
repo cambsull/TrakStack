@@ -5,13 +5,6 @@ import albumArt from '../mockdata/img/nerdLife.PNG';
 import albumArt2 from '../mockdata/img/brothers.PNG';
 import albumArt3 from '../mockdata/img/darkSideOfTheMoon.PNG';
 
-//Convert duration in seconds to minutes and seconds and display appropriately.
-function formatDuration(seconds) {
-    const minutes = Math.floor(seconds / 60);
-    const remainingSeconds = seconds % 60; //Return remainder
-    return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`; //padStart to put a 0 in tens column in the event < 10 seconds remain
-}
-
 function Track (props) {
 
         return (
@@ -23,7 +16,6 @@ function Track (props) {
                 <div className={styles.artistName}> {props.artistName}</div>
                 <div className={styles.albumTitle}>{props.albumTitle}</div>
                 <div className={styles.trackName}>{props.trackName}</div>
-                <div className={styles.trackDuration}>{formatDuration(props.duration)}</div>
             </div>
         </div>
         <div>

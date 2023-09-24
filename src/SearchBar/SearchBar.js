@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import styles from './SearchBar.module.css';
 
+
 function SearchBar({ onSearch }) {
     const [searchTerm, setSearchTerm] = useState("");
 
