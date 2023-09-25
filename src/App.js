@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+
 import Tracklist from './Tracklist/Tracklist.js';
 import SearchBar from './SearchBar/SearchBar.js';
 import SearchResults from './SearchResults/SearchResults.js';
@@ -69,10 +69,8 @@ function App() {
     //Rendering
     return (
         <>
-        <Router>
-            <Routes>
-            <Route path="/" element={<Callback setToken={setToken} />} />
-            </Routes>
+       
+            {token ? <p></p> : <Callback setToken={setToken} />}
        
             <div className="mainContainer">
                 
@@ -89,7 +87,7 @@ function App() {
                     <Tracklist tracks={tracks} setTracks={setTracks} />
                 </div>
             </div>
-            </Router>
+    
         </>
 
     )
