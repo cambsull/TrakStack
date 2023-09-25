@@ -17,7 +17,7 @@ function Callback({ setToken }) {
             const body = new URLSearchParams();
             body.append('grant_type', 'authorization_code');
             body.append('code', code);
-            body.append('redirect_uri', 'https://trakstack.netlify.app');
+            body.append('redirect_uri', 'https://development--trakstack.netlify.app/');
 
             // Get env variables
             const clientID = process.env.REACT_APP_CLIENT_ID;
