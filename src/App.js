@@ -54,7 +54,7 @@ function App() {
                 setResults(filteredResults)
             })
             .catch(error => {
-                alert("An error occurred- please ensure you are logged into Spotify via the Login to Spotify button!");
+                alert("An error occurred- please ensure you are logged into Spotify via the Login to Spotify button!", error);
                 setResults([]);
             });
     }
