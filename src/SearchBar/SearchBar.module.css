@@ -1,9 +1,10 @@
-/*Search bar CSS module*/
-
+@media only screen and (max-width: 767px) {
+    
 .searchBar {
     width: 100%;
     padding: 10px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .searchBar input {
@@ -11,5 +12,84 @@
     padding: 8px;
     border-radius: 4px;
     border: 1px solid #ddd;
-    font-size: 16px;
+    font-size: 1.2rem;
+    text-align: center;
 }
+
+.searchButton {
+    display: block;
+    width: 90%;
+    margin: 1rem auto;
+    padding: 10px;
+
+    background-color: rgba(120, 80, 150, 0.8);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: gold;
+}
+
+
+.searchButton:active {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(80,40,110, 0.8);
+    box-shadow: 0 6px 8px rgba(255, 255, 255, 0.6);
+}
+
+
+}
+
+
+@media only screen and (min-width: 1280px) {
+    .searchButton:hover {
+        background-color: rgba(140, 100, 170, 0.8);
+        box-shadow: 0 4px 6px rgba(255, 255, 255, 0.8), 0 4px 12px rgba(255, 215, 0, 0.6);
+    }
+
+    .searchBar {
+        width: 100%;
+        padding: 10px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    
+    .searchBar input {
+        width: 100%;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+    .searchButton {
+        display: block;
+        width: 90%;
+        margin: 1rem auto;
+        padding: 10px;
+    
+        background-color: rgba(120, 80, 150, 0.8);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
+        transition: background-color 0.25s ease, box-shadow 0.25s ease;
+    
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        color: gold;
+    }
+
+    .searchButton:active {
+        background-color: rgba(80,40,110, 0.8);
+        box-shadow: 0 6px 8px rgba(255, 255, 255, 0.6);
+    }
+    }
+

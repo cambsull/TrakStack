@@ -15,7 +15,7 @@ root.render(
             <header className="header">
                 <img src={logo} alt="TrakStack logo" />
                 <h2>Create your own custom Spotify playlists!</h2>
-                <h4>Development build: 0.5</h4>
+                <h4>Development build: 0.7</h4>
             </header>
   </div>
   <div className="contentContainer">

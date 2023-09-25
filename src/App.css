@@ -12,6 +12,12 @@
     }
 }
 
+.successfulLoginText {
+    color: gold;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    text-align: center;
+    font-size: 1.2rem;
+}
 
 .mainContainer {
     width: 100%;
@@ -31,12 +37,4 @@
     background-color: rgba(255, 255, 255, 0.1); 
     border-radius: 15px;
     padding: 20px;
-}
-
-.submitToSpotifyContainer {
-  display: flex;
-  justify-content: center;
-  padding-top: 15px;
-  
-  
 }

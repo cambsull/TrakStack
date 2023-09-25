@@ -1,9 +1,6 @@
 //Track component
 
 import styles from "./Track.module.css";
-import albumArt from '../mockdata/img/nerdLife.PNG';
-import albumArt2 from '../mockdata/img/brothers.PNG';
-import albumArt3 from '../mockdata/img/darkSideOfTheMoon.PNG';
 
 function Track (props) {
 
@@ -28,4 +25,3 @@ function Track (props) {
 }
 
 export default Track;
-export { albumArt, albumArt2, albumArt3 };
