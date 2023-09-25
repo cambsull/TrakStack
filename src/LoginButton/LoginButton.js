@@ -5,7 +5,7 @@ function LoginButton() {
 
     //Establish login variables
     const clientID = process.env.REACT_APP_CLIENT_ID;
-    const redirectURI = "http://localhost:3000/callback";
+    const redirectURI = "https://development--trakstack.netlify.app/";
     const scopes = "user-read-private playlist-modify-public";
 
     //CSRF token
