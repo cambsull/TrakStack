@@ -71,7 +71,7 @@ function App() {
         <>
         <Router>
             <Routes>
-            <Route path="/callback" element={<Callback setToken={setToken} />} />
+            <Route path="/" element={<Callback setToken={setToken} />} />
             </Routes>
        
             <div className="mainContainer">
