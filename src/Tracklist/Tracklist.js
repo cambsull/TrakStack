@@ -4,11 +4,34 @@ import styles from './Tracklist.module.css';
 import Track from '../Track/Track.js';
 
 function Tracklist(props) {
+    //Obtain access token from App.js via destructuring.
+    const { token } = props;
 
     //Save to spotify button logic and flash animation
     const btnRef = useRef(null);
 
     const handleClick = () => {
+        if (btnRef.current) {
+            if (token) {  // Using token in Tracklist
+                // Perform GET request with token to get user ID
+                fetch('https://api.spotify.com/v1/me', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                    },
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('User ID: ', data.id);  // Logging the User ID
+                    })
+                    .catch(error => {
+                        console.error('Error: ', error);
+                    });
+            } else {
+                console.error('No token available');
+            }
+        }
+
         if (btnRef.current) {
             btnRef.current.classList.add(styles.flash); // Apply the animation
 
@@ -18,6 +41,8 @@ function Tracklist(props) {
             }, 500);
         }
     };
+
+
 
 
     //Ability to remove tracks from playlists
@@ -47,4 +72,3 @@ function Tracklist(props) {
 }
 
 export default Tracklist;
-

@@ -84,7 +84,7 @@ function App() {
                 </div>
                 <div className="tracklistContainer">
                    
-                    <Tracklist tracks={tracks} setTracks={setTracks} />
+                    <Tracklist tracks={tracks} setTracks={setTracks} token = {token} />
                 </div>
             </div>
     
